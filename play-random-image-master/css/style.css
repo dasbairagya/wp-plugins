@@ -1,0 +1,37 @@
+h2{
+	text-align: center;
+}
+.centered-gdb{
+	width:500px;
+	height:350px;
+	border: 1px solid #ccc;
+	padding :10px;
+}
+.modal-backdrop {
+    background-color: #000 !important;;
+    z-index: 000 !important;
+}
+.modal-title {
+    text-align: center;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-family: sans;
+    color: #5e95db;
+    font-weight: 600;
+}
+.modal-header {
+    border-bottom: none;
+}
+.modal-footer {
+    border-top: none;
+    text-align: center;
+}
+
+button.btn.btn-default.pri {
+    padding: 12px 12px 12px 12px;
+    background-color: #000 !important;
+    color: #fff !important;
+    border-radius: 4px;
+    box-shadow: 10px 10px 27px #888888 !important;
+    border: 1px solid #000;
+}
