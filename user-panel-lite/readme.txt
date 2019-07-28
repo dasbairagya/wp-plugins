@@ -33,7 +33,6 @@ You can find [docs](https://github.com/filteraction/user-panel-lite) and more de
 1. screenshot-1.png
 1. screenshot-2.png
 1. screenshot-3.png
-1. screenshot-4.png
 == Changelog ==
 
 = 1.0.0 =
