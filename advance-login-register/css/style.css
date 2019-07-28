@@ -1,0 +1,216 @@
+  #wrapper{
+      position: relative;
+  width: 100%;
+  height: 100%;
+  background: url('http://unsplash.it/1200x800') center center no-repeat;
+  background-size: cover;
+  
+  &:before {
+    content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(to bottom right,#002f4b,#dc4225);
+  opacity: .6; 
+  }
+  }
+input[type="text"], input[type="email"], input[type="password"] {
+    margin-bottom: 7px !important;
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #e6e6e6;
+    box-shadow: none;
+    color: #7c8c99;
+    height: 45px;
+    margin-bottom: 30px;
+    padding-left: 20px;
+    width: 100%;
+}
+ form{
+    padding: 20px;
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 15px 0 rgba(0,0,0,0.12) !important;
+} 
+.btn-primary {
+    color: #fff;
+    background-color: #5348ab!important;
+}
+
+/************************************************************************/
+/**
+ * Login/Signup
+ */
+
+.center{
+    text-align: center;
+}
+form{
+    padding: 20px;
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 15px 0 rgba(0,0,0,0.12) !important;
+}
+h4{
+    text-align: center;
+}
+.btn{
+    border-radius: 0px;
+}
+.form-control{
+    border-radius: 0px;
+    margin-bottom: 10px;
+}
+/*p{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-align: center;
+}
+.blue{
+    color: #337ab7;
+}
+.fa{
+    color: #337ab7;
+}
+.fa-facebook-f{
+    padding: 10px 12px 10px 12px;
+    border: 1px solid #337ab7;
+    border-radius: 50%;
+}
+.fa-google-plus{
+    padding: 10px 8px 10px 8px;
+    border: 1px solid #337ab7;
+    border-radius: 50%;
+}
+.fa-twitter{
+    padding: 10px 8px 10px 8px;
+    border: 1px solid #337ab7;
+    border-radius: 50%;
+}
+i{
+    margin-left: 5px;
+    margin-right: 5px;
+}*/
+
+
+
+
+.flip {
+  -webkit-perspective: 800;
+perspective: 800;
+
+    position: relative;
+}
+.flip .card.flipped {
+  -webkit-transform: rotatey(-180deg);
+    transform: rotatey(-180deg);
+}
+.flip .card {
+
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+    transform-style: preserve-3d;
+    transition: 0.5s;
+}
+.flip .card .face {
+
+  -webkit-backface-visibility: hidden ;
+    backface-visibility: hidden ;
+  z-index: 2;
+   
+}
+.flip .card .front {
+  position: absolute;
+   width: 100%;
+  z-index: 1;
+
+}
+.flip .card .back {
+  -webkit-transform: rotatey(-180deg);
+    transform: rotatey(-180deg);
+}
+  .inner{margin:0px !important;}
+
+  /*loader style*/
+  #overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+#loadersmall {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border: 5px solid #ccc;
+    -webkit-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+    border-top: 5px solid #f0442c;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    z-index: 3;
+    /*margin: 125px 0px 0px -19px;*/
+    margin: 0px 0px 0px -19px;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+#list1{
+    display: none;
+}
+form#commentform {
+    margin: 25px 0;
+}
+
+/*page builder custom template customizations*/
+header.entry-header {
+    text-align: center;
+}
+
+/*faq customization*/
+.list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
+    z-index: 2;
+    color: #fff;
+    background-color: #e12c0f;
+    border-color: rgb(228, 21, 21);
+}
+h4 {
+     text-align: left;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    margin-bottom:7px;
+}

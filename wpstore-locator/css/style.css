@@ -1,0 +1,33 @@
+#map {
+height: 60%;
+width: 60%;
+margin: 20px 0px 0px 25px;
+}
+/* Optional: Makes the sample page fill the window. */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+html, body, #map_canvas { margin: 0; padding: 0; height: 100% }
+div#cform{
+display: none;
+}
+#map_canvas{
+text-align: center;
+margin:20px 0px 0px 30px; 
+width: 60%;height: 60%;
+}
+.jumbotron {
+background: #358CCE;
+color: #FFF;
+border-radius: 0px;
+}
+.jumbotron-sm { padding-top: 24px;
+padding-bottom: 24px; }
+.jumbotron small {
+color: #FFF;
+}
+.h1 small {
+font-size: 24px;
+}

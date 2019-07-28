@@ -1,0 +1,184 @@
+<?php
+/*
+Plugin Name: Archive Management
+Plugin URI: http://Gowebbi.com/
+Description: This is not just a plugin, its a inspiration for plugin development.
+Author: Gopal Dasbairagya
+Version: 1.0
+Author URI: http://Gowebbi.com/
+*/
+function my_scripts() {
+    wp_register_style( 'archive-manager', plugins_url('mystyle.css', __FILE__) );
+    wp_enqueue_style( 'archive-manager' );
+}
+add_action('wp_enqueue_scripts','my_scripts');
+
+
+add_action('admin_menu', 'wp_add_draft');
+function wp_add_draft(){
+    add_menu_page(__('draft', 'menu-draft'), __('Draft', 'menu-draft'), 'manage_options', 'add-draft', 'add_draft');
+
+}
+
+function add_draft(){
+    ?>
+    <script>
+        jQuery(function  () {
+
+            // Get the form fields and hidden div
+            var checkbox = jQuery("#chk1");
+            var hidden = jQuery("#list1");
+            hidden.hide();
+            checkbox.change(function () {
+                if (checkbox.is(':checked')) {
+                    hidden.show();
+                } else {
+                    hidden.hide();
+//                    $("#list").val("");
+                }
+            });
+        });
+
+        jQuery(function () {
+
+            // Get the form fields and hidden div
+            var checkbox = jQuery("#chk2");
+            var hidden = jQuery("#list2");
+            hidden.hide();
+            checkbox.change(function () {
+                if (checkbox.is(':checked')) {
+                    hidden.show();
+                } else {
+                    hidden.hide();
+//                    $("#list").val("");
+                }
+            });
+        });
+    </script>
+<center>
+        <h1>:: Archive Management ::</h1>
+    <label for="chk" style="color:#026466">
+        <input type="checkbox" id="chk1" /><b>From Category</b>
+        <input type="checkbox" id="chk2" /><b>From Post Type</b>
+        <label>
+            <br />
+            <br />
+<div id="list1" class="myplug" style="width:400px;height:400px;padding:10px;border:10px groove #cd9632;">
+    <form action="" method="post">
+        <h3><?php _e( 'Categories:' ); ?></h3>
+        <select name="category" required="required">
+            <option value="">Select a category</option>
+            <?php $terms = get_terms( array(
+                'taxonomy' => 'category',
+                'hide_empty' => false,
+            ) );
+            foreach($terms as $term)
+
+            {
+                ?>
+                <option value='<?php echo $term->name ?>'><?php echo $term->name ?></option>
+            <?php } ?>
+
+        </select>
+        <br/>
+        <h3><?php _e( 'Schedule your Post:' ); ?></h3>
+        Pick a start date:<br/>
+        <input type="date" name="sday" required="required"><br/><br/>
+        Pick a end date :<br/>
+        <input type="date" name="eday" required="required"><br/>
+        <h3><?php _e( 'Post Status:' ); ?></h3><br>
+        <select name="status" required="required">
+            <option value="">select</option>
+            <option value="draft">Draft</option>
+            <option value="publish">Publish</option>
+        </select>
+        <input id="thi" type="submit" name="submit">
+    </form>
+                <?php
+               if (isset($_POST['submit']) && !empty($_POST['category']) && !empty($_POST['sday'])&& !empty($_POST['eday']) && !empty($_POST['status'])) {
+//                if (isset($_POST['submit'])) {
+                    global $wpdb;
+                    $category = $_POST['category'];
+                    $status = $_POST['status'];
+                    $sday = $_POST['sday'];
+                    $eday = $_POST['eday'];
+                    $today = date('Y-m-d');
+                    $date = new DateTime(date("Y-m-d"));
+                    $date->modify('-7 day');
+                    $lastweek = $date->format('Y-m-d');
+                    $result = $wpdb->get_results("UPDATE $wpdb->posts SET post_status = '$status' where ID IN 
+            (select object_id from wp_term_relationships where term_taxonomy_id =
+            (SELECT term_id from wp_terms  where name ='$category')) AND post_date >= '$sday' AND post_date <= '$eday'" );
+
+
+                    if($result > 0){
+                        $message =  "<br /><center><code>Posts have been ".$status."ed successfully........! </code></center> <br />";
+                    }
+                    else{
+                        $message = "No post found.";
+                        exit( var_dump( $wpdb->last_query ) );
+                        echo $sday;
+                        echo '<br />';
+                        echo $eday;
+                    }
+                }?>
+</div>
+
+
+
+<br /><div id="list2" class="myplug" style="width:400px;height:400px;padding:10px;border:10px groove #cd9632;">
+    <form action="" method="post">
+        <h3><?php _e( 'Post Type:' ); ?></h3><br>
+        <select name="category" required="required">
+            <option value="">select</option>
+            <option value="old_post">Recent Post</option>
+            <option value="new_post">Banner Post</option>
+            <option value="slider">slider</option>
+        </select><br/>
+        <h3><?php _e( 'Schedule your Post:' ); ?></h3>
+        Pick a start date:<br/>
+        <input type="date" name="sday" required="required"><br/>
+        Pick a end date :<br/>
+        <input type="date" name="eday" required="required"><br/>
+        <h3><?php _e( 'Post Status:' ); ?></h3><br>
+        <select name="status" required="required">
+            <option value="">select</option>
+            <option value="draft">Draft</option>
+            <option value="publish">Publish</option>
+        </select>
+        <input type="submit" name="submit">
+    </form>
+    <?php
+        if (isset($_POST['submit']) && !empty($_POST['category']) && !empty($_POST['sday'])&& !empty($_POST['eday']) && !empty($_POST['status'])) {
+        global $wpdb;
+        $category = $_POST['category'];
+        $status = $_POST['status'];
+        $sday = $_POST['sday'];
+        $eday = $_POST['eday'];
+        $today = date('Y-m-d');
+        echo '<br />';
+        $date = new DateTime(date("Y-m-d"));
+        $date->modify('-7 day');
+        $lastweek = $date->format('Y-m-d');
+        $result = $wpdb->get_results("UPDATE $wpdb->posts SET post_status = '$status' WHERE post_date >= '$sday' AND post_date <= '$eday' AND post_type='$category'");
+            if($result > 0){
+            $message =  "<br /><center><code>Posts have been ".$status."ed successfully........! </code></center> <br />";
+        }
+        else{
+            exit( var_dump( $wpdb->last_query ) );
+            echo $sday;
+            echo '<br />';
+            echo $eday;
+        }
+    }?>
+</div>
+</center>
+<?php
+    echo "<code>".$message."</code>";
+    ?>
+
+<?php
+}
+?>
+
+

@@ -1,0 +1,10 @@
+h2{
+	text-align: center;
+}
+.centered-gdb{
+	width:500px;
+	height:350px;
+	/*text-align: center;*/
+	border: 1px solid #ccc;
+	padding :10px;
+}

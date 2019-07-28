@@ -1,0 +1,66 @@
+form#form-search {
+    color: #fff;
+    padding: 50px;
+    /* margin-left: 28%; */
+    border: 5px solid #00c4ff;
+    width: 34%;
+    position: relative;
+    left: 28%;
+    background: #006799;
+    margin-top: 30px;
+}
+
+input#std-name {
+    border-radius: 10px;
+    width: 53%;
+    height: 40px;
+    transition: 1s;
+}
+input#std-name:hover {
+    border: #00c4ff 1px solid;
+    transition: 1s;
+}
+input#prnt_email {
+    border-radius: 10px;
+    width: 53%;
+    height: 40px;
+    right: 5px;
+    position: relative;
+    transition: 1s;
+}
+input#prnt_email:hover {
+    border: 1px solid #00c4ff;
+    transition: 1s;
+}
+
+label.stu_cr {
+    font-size: 21px;
+    text-transform: uppercase;
+    padding-right: 14px;
+    font-weight: bolder;
+}
+label.pr_cr {
+    font-size: 21px;
+    text-transform: uppercase;
+    padding-right: 14px;
+    font-weight: bolder;
+}
+input#btn_subm {
+    background: #00c4ff;
+    color: #fff;
+    border: none;
+    width: 388px;
+    height: 43px;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    transition: 1s;
+}
+input#btn_subm:hover {
+    background: #0089ff;
+    transition: 1s;
+}
+.form-group {
+    margin-top: 15px;
+}

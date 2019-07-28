@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SereniTea - Admin</title>
+<meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+<!-- bootstrap 3.0.2 -->
+<link href="master/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<!-- font Awesome -->
+<link href="master/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<!-- Ionicons -->
+<link href="master/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+<!-- Morris chart -->
+<link href="master/css/morris/morris.css" rel="stylesheet" type="text/css" />
+<!-- jvectormap -->
+<link href="master/css/jvectormap/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css" />
+<!-- fullCalendar -->
+<link href="master/css/fullcalendar/fullcalendar.css" rel="stylesheet" type="text/css" />
+<!-- Daterange picker -->
+<link href="http://clientsdisplay.com/sereniws/master/css/daterangepicker/daterangepicker-bs3.css" rel="stylesheet" type="text/css" />
+<!-- bootstrap wysihtml5 - text editor -->
+<link href="master/css/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css" rel="stylesheet" type="text/css" />
+<!-- DATA TABLES -->
+<link href="master/css/datatables/dataTables.bootstrap.css" rel="stylesheet" type="text/css" />
+<!-- Jquery UI style -->
+<link href="master/css/jquery-ui.css" rel="stylesheet" type="text/css" />
+<!-- Theme style -->
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="skin-blue">
+<!-- header logo: style can be found in header.less -->
+<header class="header"> <a href="dashboard.html" class="logo"> 
+  <!-- Add the class icon to your logo image or logo icon to add the margining --> 
+  <img src=""  alt="Serenitea" /> </a> 
+  <!-- Header Navbar: style can be found in header.less -->
+  <nav class="navbar navbar-static-top" role="navigation"> 
+    <!-- Sidebar toggle button--> 
+    <a href="#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a>
+    <div class="navbar-right">
+      <ul class="nav navbar-nav">
+        <!-- User Account: style can be found in dropdown.less -->
+        <li class="dropdown user user-menu"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="glyphicon glyphicon-user"></i> <span>Antico Coffee <i class="caret"></i></span> </a>
+          <ul class="dropdown-menu">
+            <!-- User image -->
+            <li class="user-header bg-light-blue"> <img src="" class="img-circle" alt="User Image" />
+              <p> Antico Coffee - Wholesale Panel </p>
+            </li>
+            <!-- Menu Body --> 
+            <!-- Menu Footer-->
+            <li class="user-footer">
+              <div class="pull-left" > <a href="edit-profile.html" class="btn btn-default btn-flat">Profile</a> </div>
+              <div class="pull-right"> <a href="sign-in.html" class="btn btn-default btn-flat">Sign out</a> </div>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+<div class="wrapper row-offcanvas row-offcanvas-left"> 
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="left-side sidebar-offcanvas"> 
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar"> 
+      <!-- Sidebar user panel -->
+      <div class="user-panel">
+        <div class="pull-left image"> <img src="" class="img-circle" alt="User Image" /> </div>
+        <div class="pull-left info">
+          <p>Antico Coffee</p>
+          <a href="#"><i class="fa fa-circle text-success"></i> Online</a> </div>
+      </div>
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu">
+        <li > <a href="dashboard.html"> <i class="fa fa-dashboard"></i> <span>Dashboard</span> </a> </li>
+        <li class="active"> <a href="order-list.html"> <i class="fa fa-pagelines"></i> <span>My Order List</span> </a> </li>
+        <li > <a href="add-new-order.html"> <i class="fa fa-pagelines"></i> <span>Add New Order</span> </a> </li>
+        <li > <a href="edit-profile.html"> <i class="fa fa-cog"></i> <span>Edit Profile</span> </a> </li>
+        <li> <a href="sign-in.html"> <i class="fa fa-sign-out"></i> <span>Sign out</span> </a> </li>
+      </ul>
+    </section>
+    <!-- /.sidebar --> 
+  </aside>
+  <!-- Right side column. Contains the navbar and content of the page -->
+  <aside class="right-side"> 
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>ORDER FORM <small>SERENITEA ADD NEW ORDER</small> </h1>
+      <ol class="breadcrumb">
+        <li><a href=""><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href=""><i class="fa fa-pagelines"></i> Content List </a></li>
+        <li class="active"></li>
+      </ol>
+    </section>
+    <!-- Main content -->
+    <section class="content">
+      <form role="form" name="rwsglobalform"  id="rwsglobalform" action="" method="post" enctype="multipart/form-data">
+        <div class="row">
+          <div class="col-md-12"> </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="box box-primary"> 
+              <!-- add multiple tabs of the form -->
+              <div class="nav-tabs-custom">
+                <ul class="nav nav-tabs">
+                  <li class="active"><a href="#tab_1" data-toggle="tab">SereniTEA Retail</a></li>
+                  <li class=""><a href="#tab_2" data-toggle="tab">SereniTEA Foodservice</a></li>
+                  <li class=""><a href="#tab_3" data-toggle="tab">Zoetic Retail</a></li>
+                  <li class=""><a href="#tab_4" data-toggle="tab">Zoetic Foodservice</a></li>
+                </ul>
+                <div class="tab-content">
+                  <div class="tab-pane active" id="tab_1">
+                    <h1>SereniTEA Retail</h1>
+                    <div class="col-md-6 ordercolumnhalf">
+                      <div class="box-header" align="center">
+                        <h3 class="box-title">20 Pyramid Tea Bags Box</h3>
+                        <p ></p>
+                      </div>
+                      <!-- /.box-header -->
+                      <ul>
+                        <li class="headingorderli">
+                          <div class="col-md-4"><strong>Tea Blend</strong></div>
+                          <div class="col-md-4"><strong>Fairtrade</strong></div>
+                          <div class="col-md-2">No. Of Pack</div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">English Breakfast</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[14_1]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Earl Grey</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[15_1]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Spice Chai</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[16_1]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Darjeeling Green</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[17_1]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Darjeeling Second Flush</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[13_1]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Peppermint Herbal*</div>
+                          <div class="col-md-4">No</div>
+                          <div class="col-md-2">
+                            <input name="data[18_1]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Chamomile Herbal*</div>
+                          <div class="col-md-4">No</div>
+                          <div class="col-md-2">
+                            <input name="data[1_1]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Lemongrass & Ginger*</div>
+                          <div class="col-md-4">No</div>
+                          <div class="col-md-2">
+                            <input name="data[19_1]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-md-6 ordercolumnhalf">
+                      <div class="box-header" align="center">
+                        <h3 class="box-title">20 Pyramid Tea Bags Tin</h3>
+                        <p ></p>
+                      </div>
+                      <!-- /.box-header -->
+                      <ul>
+                        <li class="headingorderli">
+                          <div class="col-md-4"><strong>Tea Blend</strong></div>
+                          <div class="col-md-4"><strong>Fairtrade</strong></div>
+                          <div class="col-md-2">No. Of Pack</div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">English Breakfast</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[14_2]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Earl Grey</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[15_2]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Spice Chai</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[16_2]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Darjeeling Green</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[17_2]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Darjeeling Second Flush</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[13_2]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Peppermint Herbal*</div>
+                          <div class="col-md-4">No</div>
+                          <div class="col-md-2">
+                            <input name="data[18_2]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Chamomile Herbal*</div>
+                          <div class="col-md-4">No</div>
+                          <div class="col-md-2">
+                            <input name="data[1_2]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Lemongrass & Ginger*</div>
+                          <div class="col-md-4">No</div>
+                          <div class="col-md-2">
+                            <input name="data[19_2]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-md-6 ordercolumnhalf">
+                      <div class="box-header" align="center">
+                        <h3 class="box-title">125g Loose Leaf Tea Box</h3>
+                        <p ></p>
+                      </div>
+                      <!-- /.box-header -->
+                      <ul>
+                        <li class="headingorderli">
+                          <div class="col-md-4"><strong>Tea Blend</strong></div>
+                          <div class="col-md-4"><strong>Fairtrade</strong></div>
+                          <div class="col-md-2">No. Of Pack</div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">English Breakfast</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[14_12]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Earl Grey</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[15_12]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Spice Chai</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[16_12]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Darjeeling Green</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[17_12]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Darjeeling Second Flush</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[13_12]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Peppermint Herbal*</div>
+                          <div class="col-md-4">No</div>
+                          <div class="col-md-2">
+                            <input name="data[18_12]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Chamomile Herbal*</div>
+                          <div class="col-md-4">No</div>
+                          <div class="col-md-2">
+                            <input name="data[1_12]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Lemongrass & Ginger*</div>
+                          <div class="col-md-4">No</div>
+                          <div class="col-md-2">
+                            <input name="data[19_12]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-md-6 ordercolumnhalf">
+                      <div class="box-header" align="center">
+                        <h3 class="box-title">125g Loose Leaf Tea Tin</h3>
+                        <p ></p>
+                      </div>
+                      <!-- /.box-header -->
+                      <ul>
+                        <li class="headingorderli">
+                          <div class="col-md-4"><strong>Tea Blend</strong></div>
+                          <div class="col-md-4"><strong>Fairtrade</strong></div>
+                          <div class="col-md-2">No. Of Pack</div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">English Breakfast</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[14_11]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Earl Grey</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[15_11]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Spice Chai</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[16_11]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Darjeeling Green</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[17_11]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Darjeeling Second Flush</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[13_11]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Irish Breakfast</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[21_11]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Darjeeling First Flush</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[22_11]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Peppermint Herbal*</div>
+                          <div class="col-md-4">No</div>
+                          <div class="col-md-2">
+                            <input name="data[18_11]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Chamomile Herbal*</div>
+                          <div class="col-md-4">No</div>
+                          <div class="col-md-2">
+                            <input name="data[1_11]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Lemongrass & Ginger*</div>
+                          <div class="col-md-4">No</div>
+                          <div class="col-md-2">
+                            <input name="data[19_11]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-md-6 ordercolumnhalf">
+                      <div class="box-header" align="center">
+                        <h3 class="box-title">Variety Pack (Enveloped Pyramid Tea Bags)</h3>
+                        <p ></p>
+                      </div>
+                      <!-- /.box-header -->
+                      <ul>
+                        <li class="headingorderli">
+                          <div class="col-md-4"><strong>Tea Blend</strong></div>
+                          <div class="col-md-4"><strong>Fairtrade</strong></div>
+                          <div class="col-md-2">No. Of Pack</div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">50 Black Tea Varieties</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[32_17]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">50 Herbal Green Varieties</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[33_17]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">7 Varieties</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[34_17]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-md-6 ordercolumnhalf">
+                      <div class="box-header" align="center">
+                        <h3 class="box-title">Wooden Tea Chests</h3>
+                        <p ></p>
+                      </div>
+                      <!-- /.box-header -->
+                      <ul>
+                        <li class="headingorderli">
+                          <div class="col-md-4"><strong>Tea Blend</strong></div>
+                          <div class="col-md-4"><strong>Fairtrade</strong></div>
+                          <div class="col-md-2">No. Of Pack</div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">4 Compartment</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[2_3]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">9 Compartment</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[26_3]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">12 Compartment</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[27_3]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-md-6 ordercolumnhalf">
+                      <div class="box-header" align="center">
+                        <h3 class="box-title">Accessories & Teaware</h3>
+                        <p ></p>
+                      </div>
+                      <!-- /.box-header -->
+                      <ul>
+                        <li class="headingorderli">
+                          <div class="col-md-4"><strong>Tea Blend</strong></div>
+                          <div class="col-md-4"><strong>Fairtrade</strong></div>
+                          <div class="col-md-2">No. Of Pack</div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Teaspoon (stainless steel)</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[28_18]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Tea Tongs (stainless steel)</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[29_18]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Ceramic Teapot with steel infuser and lid (1 cup or 2 cup sizes available)</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[30_18]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Stainless Steel Teapot with steel infuser and lid (1 cup or 2 cup sizes available)</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[31_18]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="tab-pane " id="tab_2">
+                    <h1>SereniTEA Foodservice</h1>
+                    <div class="col-md-6 ordercolumnhalf">
+                      <div class="box-header" align="center">
+                        <h3 class="box-title">100 Pyramid Tea Bags Box</h3>
+                        <p ></p>
+                      </div>
+                      <!-- /.box-header -->
+                      <ul>
+                        <li class="headingorderli">
+                          <div class="col-md-4"><strong>Tea Blend</strong></div>
+                          <div class="col-md-4"><strong>Fairtrade</strong></div>
+                          <div class="col-md-2">No. Of Pack</div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">English Breakfast</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[14_9]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Earl Grey</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[15_9]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Spice Chai</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[16_9]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Darjeeling Green</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[17_9]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Darjeeling Second Flush</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[13_9]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Irish Breakfast</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[21_9]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Peppermint Herbal*</div>
+                          <div class="col-md-4">No</div>
+                          <div class="col-md-2">
+                            <input name="data[18_9]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Chamomile Herbal*</div>
+                          <div class="col-md-4">No</div>
+                          <div class="col-md-2">
+                            <input name="data[1_9]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Lemongrass & Ginger*</div>
+                          <div class="col-md-4">No</div>
+                          <div class="col-md-2">
+                            <input name="data[19_9]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-md-6 ordercolumnhalf">
+                      <div class="box-header" align="center">
+                        <h3 class="box-title">100 Enveloped Pyramid Tea Bags Box</h3>
+                        <p ></p>
+                      </div>
+                      <!-- /.box-header -->
+                      <ul>
+                        <li class="headingorderli">
+                          <div class="col-md-4"><strong>Tea Blend</strong></div>
+                          <div class="col-md-4"><strong>Fairtrade</strong></div>
+                          <div class="col-md-2">No. Of Pack</div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">English Breakfast</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[14_10]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Earl Grey</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[15_10]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Spice Chai</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[16_10]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Darjeeling Green</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[17_10]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Darjeeling Second Flush</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[13_10]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Irish Breakfast</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[21_10]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Peppermint Herbal*</div>
+                          <div class="col-md-4">No</div>
+                          <div class="col-md-2">
+                            <input name="data[18_10]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Chamomile Herbal*</div>
+                          <div class="col-md-4">No</div>
+                          <div class="col-md-2">
+                            <input name="data[1_10]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Lemongrass & Ginger*</div>
+                          <div class="col-md-4">No</div>
+                          <div class="col-md-2">
+                            <input name="data[19_10]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-md-6 ordercolumnhalf">
+                      <div class="box-header" align="center">
+                        <h3 class="box-title">1 Kg Loose Leaf Resealable Pouch</h3>
+                        <p ></p>
+                      </div>
+                      <!-- /.box-header -->
+                      <ul>
+                        <li class="headingorderli">
+                          <div class="col-md-4"><strong>Tea Blend</strong></div>
+                          <div class="col-md-4"><strong>Fairtrade</strong></div>
+                          <div class="col-md-2">No. Of Pack</div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">English Breakfast</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[14_8]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Earl Grey</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[15_8]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Spice Chai</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[16_8]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Darjeeling Green</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[17_8]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Assam Leaf</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[10_8]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Masala Chai</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[4_8]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Jasmine Green</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[12_8]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Darjeeling Second Flush</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[13_8]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Irish Breakfast</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[21_8]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Darjeeling First Flush</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[22_8]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Peppermint Herbal*</div>
+                          <div class="col-md-4">No</div>
+                          <div class="col-md-2">
+                            <input name="data[18_8]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Chamomile Herbal*</div>
+                          <div class="col-md-4">No</div>
+                          <div class="col-md-2">
+                            <input name="data[1_8]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Lemongrass & Ginger*</div>
+                          <div class="col-md-4">No</div>
+                          <div class="col-md-2">
+                            <input name="data[19_8]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-md-6 ordercolumnhalf">
+                      <div class="box-header" align="center">
+                        <h3 class="box-title">Teapots</h3>
+                        <p >Available as 1 cup or 2 cup sizes. Come with steel lids and infusers.</p>
+                      </div>
+                      <!-- /.box-header -->
+                      <ul>
+                        <li class="headingorderli">
+                          <div class="col-md-4"><strong>Tea Blend</strong></div>
+                          <div class="col-md-4"><strong>Fairtrade</strong></div>
+                          <div class="col-md-2">No. Of Pack</div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Ceramic Teapot (White)</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[5_5]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Stainless Steel Teapot</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[7_5]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-md-6 ordercolumnhalf">
+                      <div class="box-header" align="center">
+                        <h3 class="box-title">Tea Tray Set (comes in sets of 2)</h3>
+                        <p ></p>
+                      </div>
+                      <!-- /.box-header -->
+                      <ul>
+                        <li class="headingorderli">
+                          <div class="col-md-4"><strong>Tea Blend</strong></div>
+                          <div class="col-md-4"><strong>Fairtrade</strong></div>
+                          <div class="col-md-2">No. Of Pack</div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Teapot (1 cup or 2 cup) + Milk Jug + Wooden Tray + Ceramic Cup + Ceramic Tea Bag Dish</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[6_6]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Steel Option (Teapot and Milk Jug)</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[11_6]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-md-6 ordercolumnhalf">
+                      <div class="box-header" align="center">
+                        <h3 class="box-title">Other Accessories</h3>
+                        <p ></p>
+                      </div>
+                      <!-- /.box-header -->
+                      <ul>
+                        <li class="headingorderli">
+                          <div class="col-md-4"><strong>Tea Blend</strong></div>
+                          <div class="col-md-4"><strong>Fairtrade</strong></div>
+                          <div class="col-md-2">No. Of Pack</div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Teaspoon (to serve loose tea)</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[9_4]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Wooden Tea Chest 4 compartment</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[8_4]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Wooden Tea Chest 9 compartment</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[23_4]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Wooden Tea Stand 4 compartment</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[3_4]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Tea Menu Card (free)</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[24_4]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                        <li>
+                          <div class="col-md-4">Display/Storage Tins (free)</div>
+                          <div class="col-md-4">Yes</div>
+                          <div class="col-md-2">
+                            <input name="data[25_4]" id="orderunit"  value="0" type="text" size="3" />
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="tab-pane " id="tab_3">
+                    <h1>Zoetic Retail</h1>
+                    <div class="col-md-6 ordercolumnhalf">
+                      <div class="box-header" align="center">
+                        <h3 class="box-title">Tea Bags Box of 100</h3>
+                        <p ></p>
+                      </div>
+                      <!-- /.box-header -->
+                      <ul>
+                        <li class="headingorderli">
+                          <div class="col-md-4"><strong>Tea Blend</strong></div>
+                          <div class="col-md-4"><strong>Fairtrade</strong></div>
+                          <div class="col-md-2">No. Of Pack</div>
+                        </li>
+                        <li style="text-align:center; color:#ff0000;">
+                          <h3>No order in this categories!</h3>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-md-6 ordercolumnhalf">
+                      <div class="box-header" align="center">
+                        <h3 class="box-title">Tea Bags Box of 1000</h3>
+                        <p ></p>
+                      </div>
+                      <!-- /.box-header -->
+                      <ul>
+                        <li class="headingorderli">
+                          <div class="col-md-4"><strong>Tea Blend</strong></div>
+                          <div class="col-md-4"><strong>Fairtrade</strong></div>
+                          <div class="col-md-2">No. Of Pack</div>
+                        </li>
+                        <li style="text-align:center; color:#ff0000;">
+                          <h3>No order in this categories!</h3>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-md-6 ordercolumnhalf">
+                      <div class="box-header" align="center">
+                        <h3 class="box-title">Enveloped tea bags  Box of 1000</h3>
+                        <p ></p>
+                      </div>
+                      <!-- /.box-header -->
+                      <ul>
+                        <li class="headingorderli">
+                          <div class="col-md-4"><strong>Tea Blend</strong></div>
+                          <div class="col-md-4"><strong>Fairtrade</strong></div>
+                          <div class="col-md-2">No. Of Pack</div>
+                        </li>
+                        <li style="text-align:center; color:#ff0000;">
+                          <h3>No order in this categories!</h3>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-md-6 ordercolumnhalf">
+                      <div class="box-header" align="center">
+                        <h3 class="box-title">Loose leaf 1Kg Resealable Pouch</h3>
+                        <p ></p>
+                      </div>
+                      <!-- /.box-header -->
+                      <ul>
+                        <li class="headingorderli">
+                          <div class="col-md-4"><strong>Tea Blend</strong></div>
+                          <div class="col-md-4"><strong>Fairtrade</strong></div>
+                          <div class="col-md-2">No. Of Pack</div>
+                        </li>
+                        <li style="text-align:center; color:#ff0000;">
+                          <h3>No order in this categories!</h3>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-md-6 ordercolumnhalf">
+                      <div class="box-header" align="center">
+                        <h3 class="box-title">Enveloped tea bags: Box of 100</h3>
+                        <p ></p>
+                      </div>
+                      <!-- /.box-header -->
+                      <ul>
+                        <li class="headingorderli">
+                          <div class="col-md-4"><strong>Tea Blend</strong></div>
+                          <div class="col-md-4"><strong>Fairtrade</strong></div>
+                          <div class="col-md-2">No. Of Pack</div>
+                        </li>
+                        <li style="text-align:center; color:#ff0000;">
+                          <h3>No order in this categories!</h3>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-md-6 ordercolumnhalf">
+                      <div class="box-header" align="center">
+                        <h3 class="box-title">Promotional Material</h3>
+                        <p ></p>
+                      </div>
+                      <!-- /.box-header -->
+                      <ul>
+                        <li class="headingorderli">
+                          <div class="col-md-4"><strong>Tea Blend</strong></div>
+                          <div class="col-md-4"><strong>Fairtrade</strong></div>
+                          <div class="col-md-2">No. Of Pack</div>
+                        </li>
+                        <li style="text-align:center; color:#ff0000;">
+                          <h3>No order in this categories!</h3>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="tab-pane " id="tab_4">
+                    <h1>Zoetic Foodservice</h1>
+                    <div class="col-md-6 ordercolumnhalf">
+                      <div class="box-header" align="center">
+                        <h3 class="box-title">25 Tea Bags (String and Tag)</h3>
+                        <p ></p>
+                      </div>
+                      <!-- /.box-header -->
+                      <ul>
+                        <li class="headingorderli">
+                          <div class="col-md-4"><strong>Tea Blend</strong></div>
+                          <div class="col-md-4"><strong>Fairtrade</strong></div>
+                          <div class="col-md-2">No. Of Pack</div>
+                        </li>
+                        <li style="text-align:center; color:#ff0000;">
+                          <h3>No order in this categories!</h3>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-md-6 ordercolumnhalf">
+                      <div class="box-header" align="center">
+                        <h3 class="box-title">100 Tea Bags (String and Tag)</h3>
+                        <p ></p>
+                      </div>
+                      <!-- /.box-header -->
+                      <ul>
+                        <li class="headingorderli">
+                          <div class="col-md-4"><strong>Tea Blend</strong></div>
+                          <div class="col-md-4"><strong>Fairtrade</strong></div>
+                          <div class="col-md-2">No. Of Pack</div>
+                        </li>
+                        <li style="text-align:center; color:#ff0000;">
+                          <h3>No order in this categories!</h3>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="box box-warning">
+              <div class="box-footer" style="text-align:center">
+                <button class="btn btn-primary" type="submit" name="rws-submit">Next >></button>
+                &nbsp;&nbsp;&nbsp;&nbsp;</div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div id="gt-formfeedback"><b><font size="4">Postage and Handling / Freight & Handling</font></b>
+              <div class="table-responsive">
+                <table class="table">
+                  <tr>
+                    <th>Delivery Location</th>
+                    <th>Time</th>
+                    <th>Price^</th>
+                  </tr>
+                  <tr>
+                    <td>Melbourne Metro</td>
+                    <td>1 day</td>
+                    <td>$ 9</td>
+                  </tr>
+                  <tr>
+                    <td>Sydney, Adelaide, Canberra & Brisbane Metros</td>
+                    <td>1-3 days</td>
+                    <td>$ 13</td>
+                  </tr>
+                  <tr>
+                    <td>Perth & Hobart Metro</td>
+                    <td>3-7 days</td>
+                    <td>$ 13</td>
+                  </tr>
+                  <tr>
+                    <td>VIC, NSW, SA (regional)</td>
+                    <td>2-4 days</td>
+                    <td>Actual freight cost</td>
+                  <tr>
+                    <td>QLD, TAS, WA, NT (regional)</td>
+                    <td>3-9 days</td>
+                    <td>charged upon booking.</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div id="gt-formfeedback"><b><font size="4">NOTE:</font></b>
+              <ul>
+                <li>* For loose leaf, weight of Chamomile equivalent to 50g and for Lemongrass & Ginger and Peppermint, weight equivalent to 65g. Volumetric weight equivalent equal to 125g.</li>
+                <li>*Actual weight may vary. Volumetric weight equivalent to 1kg</li>
+                <li>^ Price may vary on large order quantities</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </form>
+    </section>
+    <!-- /.content -->
+    <footer> </footer>
+  </aside>
+  <!-- /.right-side --> 
+</div>
+<!-- ./wrapper --> 
+<!-- jQuery 2.0.2 --> 
+<script src="master/js/jquery.min.js"></script> 
+<!-- jQuery UI 1.10.3 --> 
+<script src="master/js/jquery-ui-1.10.3.min.js" type="text/javascript"></script> 
+<!-- Bootstrap --> 
+<script src="master/js/bootstrap.min.js" type="text/javascript"></script> 
+<!-- Morris.js charts --> 
+<script src="master/js/plugins/morris/morris.min.js" type="text/javascript"></script> 
+<!-- Sparkline --> 
+<script src="master/js/plugins/sparkline/jquery.sparkline.min.js" type="text/javascript"></script> 
+<!-- jvectormap --> 
+<script src="master/js/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js" type="text/javascript"></script> 
+<script src="master/js/plugins/jvectormap/jquery-jvectormap-world-mill-en.js" type="text/javascript"></script> 
+<!-- fullCalendar --> 
+<script src="master/js/plugins/fullcalendar/fullcalendar.min.js" type="text/javascript"></script> 
+<!-- jQuery Knob Chart --> 
+<script src="master/js/plugins/jqueryKnob/jquery.knob.js" type="text/javascript"></script> 
+<!-- daterangepicker --> 
+<script src="master/js/plugins/daterangepicker/daterangepicker.js" type="text/javascript"></script> 
+<!-- Bootstrap WYSIHTML5 --> 
+<script src="master/js/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js" type="text/javascript"></script> 
+<!-- iCheck --> 
+<script src="master/js/plugins/iCheck/icheck.min.js" type="text/javascript"></script> 
+<!-- AdminLTE App --> 
+<script src="master/js/AdminLTE/app.js" type="text/javascript"></script> 
+<!-- AdminLTE dashboard demo (This is only for demo purposes) --> 
+<!-- CK Editor --> 
+<script src="master/js/plugins/ckeditor/ckeditor.js" type="text/javascript"></script> 
+<script type="text/javascript">
+$(function() {
+// Replace the <textarea id="editor1"> with a CKEditor
+// instance, using default configuration.
+CKEDITOR.replace('rwscontenteditor');
+//bootstrap WYSIHTML5 - text editor
+CKEDITOR.replace('other_facilities');
+//bootstrap WYSIHTML5 - text editor
+CKEDITOR.replace('cusines');
+//bootstrap WYSIHTML5 - text editor
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,2 @@
+/****************************Plugin flow Snapshot*************************/
+add_new_order()=> order_conform()=>dataprocess.php=>My_order()=>data-save.php=>database=>order-list.php=>order_details()=>view-order.php
